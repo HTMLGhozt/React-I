@@ -1,9 +1,33 @@
-
 body {
-	background: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-input[type=checkbox]:checked {
-	color: purple;
-	background-color:purple;
-	border: 10px solid purple;
+#root {
+  background: lightgray;
+  border: 3px solid dimgray;
+  border-radius: 30px;
+
+  width: 375px;
+  height: 690px;
+}
+#root > div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+#root > div > span {
+  display: flex;
+  justify-content: center;
+}
+input[type=checkbox]:checked + span {
+	background-color: green;
+  color: white;
+  transition: background-color 3s ease;
+}
+.listItem {
+  justify-content: center;
 }
